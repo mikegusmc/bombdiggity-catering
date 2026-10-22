@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Catering Quote Sheet | Bombdiggity Hot Dogs &amp; Catering</title>
+<meta name="theme-color" content="#c8102e">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌭</text></svg>">
+<style>
+:root{--red:#c8102e;--yel:#ffc72c;--mus:#f2a900;--dark:#1d1a17;--cream:#fff8e7;--ink:#2a2420}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--cream);padding-bottom:90px}
+h1,h2{font-family:Impact,"Arial Black","Franklin Gothic Heavy",sans-serif;letter-spacing:.5px;line-height:1.1;margin:0 0 .4em;text-transform:uppercase}
+header{background:var(--red);color:#fff;padding:14px 16px;border-bottom:5px solid var(--yel)}
+header a{color:#fff;text-decoration:none;font-family:Impact,"Arial Black",sans-serif;font-size:1.3rem}
+main{max-width:760px;margin:0 auto;padding:18px 14px}
+h1{color:var(--red);font-size:clamp(1.8rem,6vw,2.6rem)}
+h2{color:var(--dark);font-size:1.3rem;margin-top:1.4em}
+.intro{margin:0 0 1em}
+.item{background:#fff;border-radius:12px;padding:12px 14px;margin:10px 0;box-shadow:0 1px 4px rgba(0,0,0,.08);display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center}
+.item.on{outline:3px solid var(--yel)}
+.name{font-weight:700}
+.desc{font-size:.88rem;color:#6b5f55}
+.meta{font-size:.88rem;color:#6b5f55}
+.step{display:flex;align-items:center;gap:6px}
+.step button{width:42px;height:42px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:1.4rem;font-weight:700;cursor:pointer}
+.step input{width:56px;height:42px;text-align:center;font-size:1.1rem;border:2px solid #ddd;border-radius:8px}
+.line{grid-column:1/-1;text-align:right;font-weight:700;color:var(--red);font-size:.95rem}
+.fixed{background:var(--dark);color:#fff}
+.fixed .desc,.fixed .meta{color:#e8dccb}
+label{display:block;font-weight:600;margin:10px 0 4px}
+input[type=text],input[type=tel],input[type=email],input[type=date],input[type=number].g,textarea{width:100%;padding:11px;font-size:1rem;border:2px solid #ddd;border-radius:8px;background:#fff}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+@media(max-width:520px){.row{grid-template-columns:1fr}}
+.total{position:fixed;left:0;right:0;bottom:0;background:var(--dark);color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;border-top:4px solid var(--yel);z-index:5}
+.total b{font-family:Impact,"Arial Black",sans-serif;font-size:1.6rem;color:var(--yel)}
+.btn{display:block;width:100%;padding:15px;margin:12px 0;border:0;border-radius:40px;font-size:1.1rem;font-weight:800;cursor:pointer;text-align:center;text-decoration:none}
+.btn.p{background:var(--red);color:#fff}.btn.s{background:var(--yel);color:var(--dark)}.btn.o{background:#fff;color:var(--dark);border:2px solid var(--dark)}
+.note{font-size:.9rem;color:#6b5f55;background:#fff;border-left:5px solid var(--mus);padding:10px 14px;border-radius:6px;margin-top:18px}
+#msg{text-align:center;font-weight:700;color:green;min-height:1.2em}
+.small{font-size:.9rem;text-align:center}
+</style>
+</head>
+<body>
+<header><a href="/">🌭 Bombdiggity Hot Dogs &amp; Catering</a></header>
+<main>
+<h1>Catering Quote Sheet</h1>
+<p class="intro">Tap + to add orders of each item. Your total updates as you go. When you're done, fill in your event details and send it to us. We'll email you a confirmed quote.</p>
+<div id="items"></div>
+<div class="item fixed"><div><div class="name">Setup, equipment, delivery &amp; staff (2 hours)</div>
+<div class="desc">Includes all paper goods, utensils and condiments. Typically 1 to 2 servers. Food and tax not included. If additional servers are required, price is subject to change.</div></div>
+<div class="name">$260</div></div>
+
+<h2>Your event</h2>
+<label for="f_name">Name</label><input type="text" id="f_name" autocomplete="name">
+<div class="row"><div><label for="f_phone">Phone</label><input type="tel" id="f_phone" autocomplete="tel"></div>
+<div><label for="f_email">Email</label><input type="email" id="f_email" autocomplete="email"></div></div>
+<div class="row"><div><label for="f_date">Event date</label><input type="date" id="f_date"></div>
+<div><label for="f_city">Event city</label><input type="text" id="f_city"></div></div>
+<label for="f_guests">Number of guests</label><input type="number" class="g" id="f_guests" min="0" inputmode="numeric">
+<label for="f_notes">Notes (event time, sausage choice, questions)</label><textarea id="f_notes" rows="3"></textarea>
+
+<button class="btn p" id="send">Send my quote request</button>
+<button class="btn s" id="copy">Copy summary</button>
+<div id="msg"></div>
+<a class="btn o" href="sms:+19092915214">Call or text Mike: (909) 291-5214</a>
+<p class="small">Email didn't open? Copy your summary and send it to <a href="mailto:bombdiggitydogs@yahoo.com">bombdiggitydogs@yahoo.com</a>, or <a href="tel:+19092915214">call Mike</a>.</p>
+<p class="small"><a href="/assets/Bombdiggity-Catering-Quote-Sheet.xlsx" download>Prefer Excel? Download the quote sheet</a></p>
+<div class="note">Prices are estimates and food pricing is subject to change. Tax is not included. Your final quote will be confirmed by email. Minimums vary by city.</div>
+</main>
+<div class="total"><span>Estimated total</span><b id="total">$260.00</b></div>
+<script>
+var SETUP=260;
+var ITEMS=[
+["1/4 lb All Beef Jumbo Hot Dog","",20,55],
+["Jumbo All Beef Hot Dog","",20,90],
+["Bacon Wrapped Hot Dog","",20,87],
+["Kids Hot Dog","",20,55],
+["Sausage","Hot Link, Brat, Italian, Polish, Garlic Chicken (call for all varieties available)",20,95],
+["1/4 lb Turkey Dog","",20,65],
+["Veggie Burger","",10,60],
+["Veggie Brat","",10,65],
+["Pastrami Hot Dog","",10,85],
+["Chili & Cheese for Hot Dogs","About 30 servings (hot dogs not included)",1,40,"30 servings per order"],
+["Hamburgers","1/4 lb 100% Angus chuck with cheese on a gourmet bun",20,115],
+["Sliders","2 oz Angus beef with cheese and pickle on a King's Hawaiian roll",30,80],
+["Chicken Breast Strips","2 pc, battered and fried. Includes assorted sauces",25,70],
+["Potato Salad or Macaroni Salad","",50,75],
+["Pepperbellies","Fritos with chili and cheese. A huge hit!",25,70],
+["Nachos with Cheese","",25,65],
+["Assorted Chips","Priced per bag",1,1.5,"Per bag"],
+["Hawaiian Shave Ice","Needs electricity",25,70],
+["French Fries","",25,65],
+["Onion Rings","",25,70],
+["Popcorn Machine","Needs electricity",50,100],
+["Hot Churros (14\")","Needs electricity",25,60],
+["Assorted Soda","Priced per can",1,1.75,"Per can"],
+["Generator","If no electricity is available",1,50,"Per event"]
+];
+var q=ITEMS.map(function(){return 0});
+function $(s){return document.getElementById(s)}
+function money(n){return "$"+n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,",")}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+var box=$("items");
+ITEMS.forEach(function(it,i){
+  var serv=it[4]||(it[2]+" servings per order");
+  var d=document.createElement("div");d.className="item";d.id="it"+i;
+  d.innerHTML='<div><div class="name">'+esc(it[0])+'</div>'+(it[1]?'<div class="desc">'+esc(it[1])+'</div>':'')+
+  '<div class="meta">'+money(it[3])+' &middot; '+serv+'</div></div>'+
+  '<div class="step"><button type="button" aria-label="Remove one" data-i="'+i+'" data-d="-1">&minus;</button>'+
+  '<input type="number" min="0" inputmode="numeric" value="0" aria-label="Orders of '+esc(it[0])+'" data-i="'+i+'">'+
+  '<button type="button" aria-label="Add one" data-i="'+i+'" data-d="1">+</button></div><div class="line" id="ln'+i+'"></div>';
+  box.appendChild(d);
+});
+function total(){var t=SETUP;ITEMS.forEach(function(it,i){t+=it[3]*q[i]});return Math.round(t*100)/100}
+function render(){
+  ITEMS.forEach(function(it,i){
+    $("ln"+i).textContent=q[i]?q[i]+" × "+money(it[3])+" = "+money(it[3]*q[i]):"";
+    $("it"+i).classList.toggle("on",q[i]>0);
+    var inp=$("it"+i).querySelector("input");if(+inp.value!==q[i])inp.value=q[i];
+  });
+  $("total").textContent=money(total());
+}
+box.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var i=+b.dataset.i;q[i]=Math.max(0,q[i]+(+b.dataset.d));render()});
+box.addEventListener("input",function(e){if(e.target.tagName!=="INPUT")return;var v=parseInt(e.target.value,10);q[+e.target.dataset.i]=isNaN(v)||v<0?0:v;render()});
+function summary(){
+  var L=["Bombdiggity Catering Quote Request",""];
+  L.push("Name: "+$("f_name").value,"Phone: "+$("f_phone").value,"Email: "+$("f_email").value,
+    "Event date: "+$("f_date").value,"Event city: "+$("f_city").value,"Guests: "+$("f_guests").value,"","ITEMS:");
+  var any=false;
+  ITEMS.forEach(function(it,i){if(q[i]){any=true;L.push("- "+it[0]+": "+q[i]+" x "+money(it[3])+" = "+money(it[3]*q[i]))}});
+  if(!any)L.push("- (no items selected yet)");
+  L.push("- Setup, equipment, delivery & staff (2 hrs): "+money(SETUP),"","ESTIMATED TOTAL: "+money(total())+" (before tax)");
+  if($("f_notes").value)L.push("","Notes: "+$("f_notes").value);
+  return L.join("\n");
+}
+function count(){try{window.goatcounter&&goatcounter.count&&goatcounter.count({path:"quote-sheet-submit",title:"Quote sheet submit",event:true})}catch(e){}}
+$("send").onclick=function(){
+  count();
+  var subj="Catering quote request"+($("f_name").value?" - "+$("f_name").value:"")+($("f_date").value?" ("+$("f_date").value+")":"");
+  location.href="mailto:bombdiggitydogs@yahoo.com?subject="+encodeURIComponent(subj)+"&body="+encodeURIComponent(summary());
+  $("msg").textContent="Opening your email app… If nothing opened, tap Copy summary.";
+};
+$("copy").onclick=function(){
+  var s=summary();
+  function ok(){$("msg").textContent="Summary copied! Paste it into an email to bombdiggitydogs@yahoo.com."}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(ok,fb)}else fb();
+  function fb(){var t=document.createElement("textarea");t.value=s;document.body.appendChild(t);t.select();try{document.execCommand("copy");ok()}catch(e){$("msg").textContent="Couldn't copy. Please call or text Mike."}t.remove()}
+};
+render();
+</script>
+<script data-goatcounter="https://bombdiggitycatering.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
